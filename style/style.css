@@ -1,0 +1,222 @@
+input[type="button"] {
+  border: none;
+  color: none;
+  background-color:#8888FF;
+  padding:8px;
+  margin:0px;
+}
+
+#presets {
+  float:left;
+}
+
+#actions {
+  float:right;
+}
+
+nav {
+  clear:both;
+  margin-top:10px;
+}
+
+@font-face {
+  font-family: Corbert;
+  src: url('/resources/Corbert-Regular.otf');
+}
+
+h1, h2, h3, h4, h5 {
+  margin:0px;
+  padding:0px;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited, a {
+  color: #0f77d9;
+}
+
+@media print {
+  a {
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
+  .no-print {
+    display:none;
+  }
+}
+
+body {
+
+  width:980px;
+  margin:auto;
+
+  font-family: Corbert, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.dim {
+  color:#BBBBCC !important;
+}
+
+.dim a, .dim a:visited {
+  color:#BBBBCC !important;
+}
+
+
+.highlighted {
+  background-color: #DDDDEE;
+}
+
+#header {
+  width:960px;
+  padding:10px;
+
+  clear:both;
+  height:80px;
+}
+
+#header #name {
+  float:left;
+  width:550px;
+  margin-left:-3px;
+  margin-top: -11px;
+  font-size: 32px;
+}
+
+#header #info {
+  width:350px;
+  margin:0px;
+  padding:0px;
+  list-style: none;
+  font-size:18px;
+
+  text-align: right;
+  float:right;
+
+  line-height: 23px;
+}
+
+#content {
+  padding:10px;
+  clear:both;
+}
+
+.item ul {
+  margin-top:0px;
+  padding-top:0px;
+  margin-bottom:0px;
+  padding-bottom:0px;
+}
+
+.item ul li {
+  margin-bottom: 4px;
+}
+.item ul li:last-child {
+  margin-bottom: 0px;
+}
+
+#skills {
+  margin-top: 5px;
+  padding-bottom:10px;
+}
+
+#skills ul {
+  font-size: 13.5px;
+  list-style: none;
+  padding:0px;
+  margin:0px;
+}
+
+#frameworks {
+  display: inline-block;
+}
+
+#frameworks::before {
+  content: '(';
+}
+
+#frameworks::after {
+  content: ')';
+}
+
+#frameworks li::after {
+  content : ',';
+}
+
+#frameworks li:last-of-type::after {
+  content : '';
+}
+
+#skills ul li {
+  display:inline-block;
+  margin-left:10px;
+}
+
+#skills ul li:first-child {
+  margin-left:0px;
+}
+
+#skills ul .intermediate {
+  font-weight: normal;
+}
+
+#skills ul .experienced {
+  font-weight: bold;
+}
+
+.item {
+  padding-bottom:19px;
+}
+
+.item h3 {
+  display:inline-block;
+
+  font-size: 23px;
+  margin-bottom:1px;
+}
+
+
+.item .date, .item .location {
+  vertical-align: middle;
+
+  color: #888888;
+  font-size:14px;
+  margin-bottom:4px;
+  display: inline-block;
+  margin-left:5px;
+}
+
+.item .location {
+  margin-left:20px;
+
+}
+
+.item li .date {
+  margin-bottom:2px;
+  font-size:12px;
+}
+
+.item h4 {
+  clear:both;
+  font-size: 15px;
+
+  padding-bottom:10px;
+  color: #888888;
+}
+
+#education .item h4 {
+  color:inherit;
+}
+
+#education .item {
+  padding-bottom:10px;
+}

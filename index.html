@@ -1,400 +1,57 @@
-<html>
+<html ng-app="Resume">
 	<head>
-		<style>
-		
-			#library, #aicml1, #ambass {
-				display:none;
-			}
-			
-			/*#masters {
-				display:none;
-			}*/
-				
-			@font-face {
-				font-family: Corbert;
-				src: url('Corbert-Regular.otf');
-			}
-			
-			h1, h2, h3, h4, h5 {
-				margin:0px;
-				padding:0px;
-			}
-			
-			h2 {
-				margin-bottom: 12px;
-				font-size: 32px;
-			}
-			
-			
-			
-			a {
-				text-decoration: none;
-			}
-			
-			a:visited, a {
-				color: #0f77d9;
-			}
-			
-			@media print {
-				a {
-					color: inherit;
-				}
-			}
-			@media print {
-				a:visited {
-					color: inherit;
-				}
-			}
-			
-			body { 
-				
-				width:980px;
-				margin:auto;
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 
-				font-family: Corbert, Helvetica, sans-serif;
-				font-weight: bold;
-				/*background-image:url('mountains2.png');
-				background-position: bottom;
-				background-size:100%;
-				background-repeat: no-repeat;
-				background-size: 980px;
-				border: 1px solid;*/
-			}
-			
-			
-			#header {
-				width:960px;
-				padding:10px;
-
-				clear:both;
-				height:80px;
-			}
-			
-			#header #name {
-				float:left;
-				width:600px;
-				margin-left:-3px;
-				margin-top: -11px;
-				font-size: 32px;
-			}
-			
-			#header #info {
-				width:300px;
-				margin:0px;
-				padding:0px;
-				list-style: none;
-				font-size:18px;
-
-				text-align: right; 	
-				float:right;
-			
-				line-height: 23px;
-			}
-			
-			
-			#content {
-				padding:10px;
-				clear:both; 
-			}
-			
-			.item ul {
-				margin-top:0px;
-				padding-top:0px;
-				margin-bottom:0px;
-				padding-bottom:0px;
-			}
-			
-			.item ul li {
-				margin-bottom: 4px;
-			}
-			.item ul li:last-child {
-				margin-bottom: 0px;
-			}
-			
-			#skills {
-				margin-top: 5px;
-				padding-bottom:10px;
-			}
-			
-			#skills ul {
-				font-size: 13.5px;
-				list-style: none;
-				padding:0px;
-				margin:0px;						
-			}
-			
-			#skills ul li {
-				display:inline-block;
-				margin-left:10px;
-			}
-			
-			
-			#skills ul li:first-child {
-				margin-left:0px;
-			}
-			
-			#skills ul .intermediate {
-				font-weight: normal;
-			}
-			
-			#skills ul .experienced {
-				font-weight: bold;
-			}
-			
-			.item {
-				padding-bottom:19px;
-			}
-			 
-			.item h3 {
-				/*
-				float:left;
-				width:500px;
-				*/
-				display:inline-block;
-				
-				font-size: 23px;
-				margin-bottom:1px;
-			}
-
-			
-			.item .date, .item .location {
-				/*
-				float:right;
-				width:300px;
-				height:22px;
-				*/
-				vertical-align: middle;
-
-				color: #888888;
-				font-size:14px;
-				margin-bottom:4px;
-				display: inline-block;
-				margin-left:5px;
-			}
-			
-			.item .location { 
-				margin-left:20px;
-			
-			}
-
-			
-			.item li .date {
-				margin-bottom:2px;
-				font-size:12px;
-			}
-						
-			.item h4 {
-				clear:both;
-				font-size: 15px;
-
-				padding-bottom:10px;
-				color: #888888;
-			}
-			
-			#education .item h4 {
-				color:inherit;
-			}
-			
-			#education .item {
-				padding-bottom:10px;
-			}
-			
-			/*		
-			#stantec ul {
-				display: none;
-			}
-			
-			#stantec h4 {
-				padding-bottom:0px;
-			}*/
-
-		</style>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+		<script src="/resources/data.json"></script>
+	  <script src="/node_modules/angular/angular.js"></script>
+  	<script src="/js/index.js"></script>
 	</head>
-	<body>
+
+	<body ng-controller="Controller">
+
+		<nav class="no-print">
+			<div id="presets">
+				<input type="button" value="All" onclick="applyFilter()"/>
+				<input type="button" value="Program Manager" onclick="applyFilter('Program Manager')"/>
+				<input type="button" value="Developer" onclick="applyFilter('Developer')"/>
+			</div>
+
+			<div id="actions">
+				<input type="button" value="Print" onclick="print()"/>
+			</div>
+		</nav>
+
 		<div id="header">
-			<div id="name"><h1>Blaine Lewis</h1></div> 	
-			<ul id="info">
-				<!--<li>Edmonton, Alberta, Canada</li>-->
-				<li><a href="mailto:blaine.lewis.1@outlook.com">blaine.lewis.1@outlook.com</a></li>				
-				<li><a href="http://github.com/blainelewis1">github.com/blainelewis1</a></li>				
-				<li><a href="https://ca.linkedin.com/pub/blaine-lewis/41/23b/910">linkedin</a></li>				
-			</ul>		
+			<div id="name"><h1>Blaine Lewis</h1></div>
+			<ul id="info" ng-repeat="item in info">
+				<li><a href="{{item.url}}">{{item.text}}</a></li>
+			</ul>
 		</div>
 		<div id="content">
 			<div id="skills" class="section">
 				<ul>
-					<li class="experienced">Java</li>
-					<li class="intermediate">C#</li>
-					<li class="experienced">Python</li>
-					<li class="experienced">PHP</li>
-					<li class="intermediate">C/C++</li>
-					<li class="intermediate">Matlab</li>
-					<li class="experienced">Javascript (<span class="intermediate">jQuery, Node</span>)</li>
-					<li class="experienced">CSS</li>
-					<li class="experienced">HTML</li>
-					<li class="experienced">SQL (Oracle, MySQL)</li>
-					<li class="experienced">Git</li>					
-					<li class="experienced">SVN</li>
-					<li class="experienced">Eclipse</li>
-					<li class="experienced">Visual Studio</li>
+					<li ng-repeat="skill in skills" class="{{skill.experience}}">{{skill.name}} <ul ng-show="skill.frameworks.length" id="frameworks"><li ng-repeat="framework in skill.frameworks" class="{{framework.experience}}">{{framework.name}}</li></ul></li>
 				</ul>
-			</div>	
+			</div>
 			<div id="experience" class="section">
 				<h2>Experience</h2>
-				
-				<div class="item">
-					<h3>Student Contributor</h3>
-					<div class="date">September - December 2015</div>
-					<h4>Eclipse/Mylyn - <a href="http://ucosp.ca/">Undergraduate Capstone Open Source Project</a></h4>
 
-					<ul>
-						<li>Using Java to further integrate code reviews with the Mylyn Eclipse plugin.</li>
-					</ul>	
+				<div class="item" ng-repeat="experience in experiences" id="{{experience.id}}">
+					<h3 ng-bind-html="experience.title | trustAsHtml"></h3>
+					<div class="date">{{experience.date}}</div>
+					<h4 ng-bind-html="experience.company | trustAsHtml"></h4>
+					<ul><li ng-repeat="bullet in experience.bullets" ng-bind-html="bullet | trustAsHtml"></li></ul>
 				</div>
-				
-				<div class="item">
-					<h3>Program Manager Intern</h3>
-					<div class="date">May - August 2015</div>
-					<h4>Bing Ads, Microsoft</h4>
-
-					<ul>
-						<li>Reimagined piloting Bing Ads features across an entire engineering partner group and operations enabling more pilots run at scale with increased user engagement.</li>
-						<li>Discovered dependencies across Bing Ads teams to switch from an in-house version control system to Git.</li>
-						<li>Designed an experience enabling more data driven visualizations with capabilities to export to Excel.</li>
-					</ul>
-				</div>
-				
-				<div class="item" id="ambass">
-					<h3>Microsoft Intern Ambassador</h3>
-					<div class="date">September - April 2015</div>
-					<h4>Microsoft</h4>
-					<ul>
-						<li>As a volunteer, hosted networking events for over 50 students at the University of Alberta.</li>
-						<li>Mentored several students by tutoring computer science and assisting with job applications.</li>
-					</ul>
-				</div>
-
-				<div class="item">
-					<h3><a href="https://github.com/blainelewis1/multissh">MultiSSH</a></h3>
-					<div class="date">January - April 2015</div>
-					<h4>Research - University of Alberta</h4>
-					<ul>
-						<li>Researched several techniques for increasing throughput across a WAN over TCP in the presence of packet loss.</li>
-						<li>Used Python and the UNIX file system to coordinate any number of SSH streams over a network.</li>
-						<li>Obtained a 200% increase in throughput over a simulated environment with 95% confidence.</li> 
-					</ul>
-				</div>
-
-				<div class="item" id="ms1">
-					<h3>Program Manager Intern</h3>
-					<div class="date">May - August 2014</div>
-					<h4>Bing Ads, Microsoft</h4>
-		
-						<ul>
-							<li>Delivered a feedback mechanism enabling efficient collection and triage for thousands of user feedback items.</li>
-							<li>Designed a new experience for the product's grid controls significantly increasing over 400 users' productivity. </li>
-							<!--<li>Gathered feedback from the product team to create a product monitoring dashboard.</li>-->
-							<li>Developed relationships across 6 teams in order to push development of features quickly.</li>
-						</ul>
-		
-				</div>
-		
-				<div class="item" id="kelsey">
-					<h3>Web Developer</h3>
-					<div class="date">February and August 2014</div>
-					<h4><a href="http://kelseyprudhomme.com">kelseyprudhomme.com</a></h4>
-					<ul>
-						<li>Voluntarily developed and deployed kelseyprudhomme.com from specification.</li> 
-						<li>Leveraged PHP's natural templating in an MVC architecture and wrote a basic CMS with jQuery on the front end.</li>
-					</ul>
-				</div>
-				
-				<div class="item" id="stantec">
-					<h3>Student Software Developer</h3>
-					<div class="date">May - August 2013</div>
-					<h4>Stantec</h4>
-		
-					<ul>
-						<li>Constructed a SharePoint media hub to store and serve video to any device for over 10,000 employees.</li>
-						<!--<li>Developed an IT site to route vacation requests, organize meeting workspaces and centralize document control. </li>-->
-						<!--<li>Redesigned the extranet and improved its controls increasing the impact of client interaction. </li>-->
-						<li>Improved C#/.NET invoicing software by implementing import and export with Excel saving over an hour per invoice. </li>
-					</ul>
-		
-				</div>
-				
-				<div class="item" id="library">
-					<h3>Youth Technology Intern</h3>
-					<div class="date">November 2011 - March 2012</div>
-					<h4>Stony Plain Public Library</h4>
-					<ul>
-						<li>Planned and taught courses about using the library's technical resources and related technology.</li>
-						<li>Tutored basic computer skills including “How to use a mouse” during one on one sessions. </li>
-						<li>Maintained and administered public computers.</li>
-					</ul>
-				</div>
-				
-				<div class="item" id="aicml2">
-					<h3>Computer Programmer</h3>
-					<div class="date">July - August 2010 &amp; 2011</div>
-					<h4>Alberta Ingenuity Centre for Machine Learning</h4>
-		
-					<ul>
-						<li>Wrote an OpenStreetMaps implementation in Java for visualization of geographically tagged data.<div class="date">2011</div></li>
-						<li>Extended OpenStreetMaps by developing prefetching and caching algorithms for an excellent viewing experience.<div class="date">2011</div></li>
-						<li>Implemented advanced graph theory algorithms to identify and visualize shortest paths in a network of people. <div class="date">2010</div></li>
-						<li>Extended existing selection and movement tools using computational geometry and linear algebra. <div class="date">2010</div></li>
-					</ul>
-					
-				</div>
-				
-				<div class="item" id="aicml1">
-					<h3>Computer Programmer</h3>
-					<div class="date">July 2010 - August 2010</div>
-					<h4>Alberta Ingenuity Centre for Machine Learning</h4>
-		
-						<ul>
-							<li>Dove into Meerkat (25 000+ lines in Java) by writing a debugger for its input files.</li>
-							<li>Implemented advanced graph theory algorithms which identify and visualize all of the shortest paths in a network of people and their relationships. </li>
-							
-						</ul>
-		
-				</div>	
 			</div>
 			<div id="education" class="section">
 				<h2>Education</h2>
-				<div class="item">
-					<h3>University of Alberta</h3>
-            		<div class="date">September 2012 - December 2016</div>
-            		<h4>BSc with specialization in Computer Sciences<br />
-						Exchange to University of Sydney</h4>          
-				</div>
-				<div class="item" id="masters">
-					<h3>University of Waterloo</h3>
-            		<div class="date">January 2016 - December 2018</div>
-            		<h4>Thesis based MSc researching human computer interaction</h4>          
-				</div>
+				<div class="item" ng-repeat="education in educations">
+					<h3>{{education.school}}</h3>
+					<div class="date">{{education.date}}</div>
+					<h4 ng-bind-html="education.degree | trustAsHtml"></h4>
+  			</div
 			</div>
-			<!--
-			<div id="skills" class="section">
-				<h2>Skills</h2>
-				<ul>
-					<li class="experienced">Java</li>
-					<li class="intermediate">C#</li>
-					<li class="experienced">Python</li>
-					<li class="experienced">PHP</li>
-					<li class="intermediate">C/C++</li>
-					<li class="intermediate">Matlab</li>
-					<li class="experienced">Javascript (<span class="intermediate">jQuery, Node</span>)</li>
-					<li class="experienced">CSS</li>
-					<li class="experienced">HTML</li>
-					<li class="experienced">SQL (Oracle, MySQL)</li>
-					<li class="experienced">Git</li>					
-					<li class="experienced">SVN</li>
-					<li class="experienced">Eclipse</li>
-					<li class="experienced">Visual Studio</li>
-				</ul>
-			</div>-->		
 		</div>
-	</body>	
+	</body>
 </html>
