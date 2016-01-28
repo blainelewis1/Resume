@@ -1,11 +1,3 @@
-input[type="button"] {
-  border: none;
-  color: none;
-  background-color:#8888FF;
-  padding:8px;
-  margin:0px;
-}
-
 #presets {
   float:left;
 }
