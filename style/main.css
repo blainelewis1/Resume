@@ -34,17 +34,25 @@ a:visited, a {
   color: #0f77d9;
 }
 
+/* TODO: move this to a button */
+
+
 @media print {
+
+  /*
   a {
     color: inherit;
   }
   a:visited {
     color: inherit;
   }
+  */
   .no-print {
     display:none;
   }
 }
+
+
 
 body {
 

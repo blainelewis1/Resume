@@ -15,11 +15,10 @@ var skills =
   {"level" : "experienced", "name" : "PHP"},
   {"level" : "intermediate", "name" : "C/C++"},
   {"level" : "intermediate", "name" : "Matlab"},
-  {"level" : "experienced", "name" : "Javascript", "frameworks" : [{"level" : "intermediate", "name" : "Node"}, {"level" : "intermediate", "name" : "jQuery"}]},
+  {"level" : "experienced", "name" : "Javascript", "frameworks" : [{"level" : "intermediate", "name" : "Node"}, {"level" : "intermediate", "name" : "jQuery"}, {"level" : "intermediate", "name" : "Angular"}]},
   {"level" : "experienced", "name" : "CSS"},
   {"level" : "experienced", "name" : "HTML"},
   {"level" : "experienced", "name" : "SQL", "frameworks" : [{"level" : "experienced", "name" : "Oracle"}, {"level" : "intermediate", "name" : "MySQL"}]},
-  {"level" : "experienced", "name" : ""},
   {"level" : "intermediate", "name" : "SVN"},
   {"level" : "experienced", "name" : "Eclipse"},
   {"level" : "experienced", "name" : "Visual Studio"}
@@ -28,10 +27,11 @@ var skills =
 var experiences = [
   {
    "id" : "mylyn",
-   "title" : "Student Contributor",
+   "title" : "Contributor",
    "date" : "September - December 2015",
    "company" : "Eclipse/Mylyn - <a href=\"http://ucosp.ca/\">Undergraduate Capstone Open Source Project</a>",
-   "bullets" : ["Using Java to further integrate code reviews with the Mylyn Eclipse plugin"]
+   "bullets" : ["Worked with a team of students across Canada to further integration of code reviews in Mylyn.",
+                "Created a data structure using Java that registers and maintains the relationship between reviews and tasks."]
  },
  {
   "id" : "ms2",
@@ -114,6 +114,10 @@ var educations =
 [
   {"school" : "University of Alberta",
    "date" : "September 2012 - December 2016",
-   "degree" : "BSc with specialization in Computer Sciences<br />Exchange to University of Sydney"
+   "degree" : "BSc with specialization in Computer Sciences"
+  },
+  {"school" : "University of Sydney",
+   "date" : "February 2016 - July 2016",
+   "degree" : "Exchange program. Focus shifted to design and business."
   }
 ];
