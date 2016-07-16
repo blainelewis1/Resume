@@ -93,7 +93,7 @@ var experiences = [
    "date" : "November 2011 - March 2012",
    "company" : "Stony Plain Public Library",
    "bullets" : ["Planned and taught courses about using the library's technical resources and related technology.",
-                "Tutored basic computer skills including “How to use a mouse” during one on one sessions.",
+                "Tutored basic computer skills including \"How to use a mouse\" during one on one sessions.",
                 "Maintained and administered public computers."]
   },
   {
