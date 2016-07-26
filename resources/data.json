@@ -1,6 +1,5 @@
-var premades = {"Program Manager" : ["ms1", "ms2", "msambass", ""], "Developer" : ["mylyn", "ms1", "ms2", "multissh", "kelsey", "stantec", "aicml"]};
-
-var info =
+var presets = ["Program Manager", "Developer"];
+var contact =
 [
   {"url" : "mailto:blaine.lewis.1@outlook.com", "text" : "blaine.lewis.1@outlook.com"},
   {"url" : "http://github.com/blainelewis1", "text" : "github.com/blainelewis1"},
@@ -27,6 +26,7 @@ var skills =
 var experiences = [
   {
    "id" : "mylyn",
+   "presets" : ["Developer"],
    "title" : "Contributor",
    "date" : "September - December 2015",
    "company" : "Eclipse/Mylyn - <a href=\"http://ucosp.ca/\">Undergraduate Capstone Open Source Project</a>",
@@ -35,6 +35,7 @@ var experiences = [
  },
  {
   "id" : "ms2",
+  "presets" : ["Program Manager", "Developer"],
   "title" : "Program Manager Intern",
   "date" : "May - August 2015",
   "company" : "Bing Ads - Microsoft",
@@ -44,6 +45,7 @@ var experiences = [
   },
   {
    "id" : "msambass",
+   "presets" : ["Program Manager"],
    "title" : "Intern Ambassador",
    "date" : "September - April 2015",
    "company" : "Microsoft",
@@ -52,6 +54,7 @@ var experiences = [
   },
   {
    "id" : "multissh",
+   "presets" : ["Developer"],
    "title" : "<a href=\"https://github.com/blainelewis1/multissh\">MultiSSH</a>",
    "date" : "January - April 2015",
    "company" : "Research - University of Alberta",
@@ -61,6 +64,7 @@ var experiences = [
   },
   {
    "id" : "ms1",
+   "presets" : ["Program Manager", "Developer"],
    "title" : "Program Manager Intern",
    "date" : "May - August 2014",
    "company" : "Bing Ads - Microsoft",
@@ -71,6 +75,7 @@ var experiences = [
   },
   {
    "id" : "kelsey",
+   "presets" : ["Developer"],
    "title" : "Web Developer",
    "date" : "February and August 2014",
    "company" : "<a href=\"http://kelseyprudhomme.com\">kelseyprudhomme.com</a>",
@@ -80,6 +85,7 @@ var experiences = [
   {
    "id" : "stantec",
    "title" : "Student Software Developer",
+   "presets" : ["Developer"],
    "date" : "May - August 2013",
    "company" : "Stantec",
    "bullets" : ["Constructed a SharePoint media hub to store and serve video to any device for over 10,000 employees.",
@@ -98,6 +104,7 @@ var experiences = [
   },
   {
    "id" : "aicml",
+   "presets" : ["Developer"],
    "title" : "Computer Programmer",
    "date" : "July - August 2010 and 2011",
    "company" : "Alberta Ingenuity Centre for Machine Learning",
@@ -112,11 +119,20 @@ var experiences = [
 
 var educations =
 [
-  {"school" : "University of Alberta",
+  {
+   "presets" : ["Developer", "Program Manager"],
+   "school" : "University of Waterloo",
+   "date" : "January 2017 - December 2018",
+   "degree" : "Thesis based MMath focusing on either bioinformatics or human computer interaction."
+  },
+  {
+   "presets" : ["Developer", "Program Manager"],
+   "school" : "University of Alberta",
    "date" : "September 2012 - December 2016",
    "degree" : "BSc with specialization in Computer Sciences"
   },
-  {"school" : "University of Sydney",
+  {"presets" : ["Developer", "Program Manager"],
+   "school" : "University of Sydney",
    "date" : "February 2016 - July 2016",
    "degree" : "Exchange program. Focus shifted to design and business."
   }
