@@ -1,7 +1,10 @@
 /*csslint ids:false*/
 
-#presets {
-  float:left;
+body {
+  width:980px;
+  margin:auto;
+
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -20,6 +23,26 @@ h1 {
   font-weight:normal;
 }
 
+h2 {
+    margin:0;
+    padding:0;
+    font-weight:normal;
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+h3 {
+    display:inline-block;
+
+    font-size: 23px;
+    font-weight:normal;
+
+    margin:0;
+    margin-bottom:1px;
+    padding:0;
+}
+
+
 h4, #education p {
   clear:both;
   font-size: 15px;
@@ -35,25 +58,6 @@ h4 {
   color: #888888;
 }
 
-h3 {
-    display:inline-block;
-
-    font-size: 23px;
-    font-weight:normal;
-
-    margin:0;
-    margin-bottom:1px;
-    padding:0;
-}
-
-h2 {
-    margin:0;
-    padding:0;
-    font-weight:normal;
-    margin-bottom: 12px;
-    font-size: 32px;
-}
-
 a {
   text-decoration: none;
 }
@@ -62,121 +66,11 @@ a:visited, a {
   color: #0f77d9;
 }
 
-/* TODO: move this to a button */
-@media print {
-
-  /*
-  a {
-    color: inherit;
-  }
-  a:visited {
-    color: inherit;
-  }
-  */
-  .no-print {
-    display:none;
-  }
-  .dim {
-      display : none;
-  }
-}
-
-body {
-  width:980px;
-  margin:auto;
-
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.dim, .dim a:visited, .dim a{
-  color:#BBBBCC;
-}
-
-.dim span, .dim h4, .dim ul, .dim .date, .dim p {
-    display : none;
-}
-
 header {
   height:80px;
   width:960px;
 
   clear:both;
-}
-
-#contact {
-  width:350px;
-  margin:0;
-  padding:0;
-  list-style: none;
-  font-size:18px;
-
-  text-align: right;
-  float:right;
-
-  line-height: 23px;
-}
-
-article ul {
-  margin-top:0;
-  padding-top:0;
-  margin-bottom:0;
-  padding-bottom:0;
-}
-
-article ul li {
-  font-size:16px;
-  margin-bottom: 4px;
-}
-article ul li:last-child {
-  margin-bottom: 0;
-}
-
-#skills {
-  margin-bottom:15px;
-}
-
-#skills ul {
-  font-size: 13.5px;
-  list-style: none;
-  padding:0;
-  margin:0;
-}
-
-#frameworks {
-  display: inline-block;
-}
-
-#frameworks::before {
-  content: '(';
-}
-
-#frameworks::after {
-  content: ')';
-}
-
-#frameworks li::after {
-  content : ',';
-}
-
-#frameworks li:last-of-type::after {
-  content : '';
-}
-
-#skills ul li {
-  display:inline-block;
-  margin-left:10px;
-}
-
-#skills ul li:first-child {
-  margin-left:0;
-}
-
-#skills ul .intermediate {
-  font-weight: normal;
-}
-
-#skills ul .experienced {
-  font-weight: bold;
 }
 
 article {
@@ -207,6 +101,113 @@ article:hover {
     background-color: #DDDDEE;
 }
 
-#education article {
+article #education {
   padding-bottom:10px;
+}
+
+article ul {
+  margin-top:0;
+  padding-top:0;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+article ul li {
+  font-size:16px;
+  margin-bottom: 4px;
+}
+article ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  /* TODO: make links turn normal colour when you actually print rather than export to pdf */
+  /*
+  a {
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
+  */
+
+  .no-print {
+    display:none;
+  }
+  .dim {
+      display : none;
+  }
+}
+
+.dim, .dim a:visited, .dim a{
+  color:#BBBBCC;
+}
+
+.dim span, .dim h4, .dim ul, .dim .date, .dim p {
+    display : none;
+}
+
+#skills {
+  margin-bottom:15px;
+}
+
+#skills ul {
+  font-size: 13.5px;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+#skills ul li {
+  display:inline-block;
+  margin-left:10px;
+}
+
+#skills ul li:first-child {
+  margin-left:0;
+}
+
+#skills ul .intermediate {
+  font-weight: normal;
+}
+
+#skills ul .experienced {
+  font-weight: bold;
+}
+
+#frameworks {
+  display: inline-block;
+}
+
+#frameworks::before {
+  content: '(';
+}
+
+#frameworks::after {
+  content: ')';
+}
+
+#frameworks li::after {
+  content : ',';
+}
+
+#frameworks li:last-of-type::after {
+  content : '';
+}
+
+#contact {
+  width:350px;
+  margin:0;
+  padding:0;
+  list-style: none;
+  font-size:18px;
+
+  text-align: right;
+  float:right;
+
+  line-height: 23px;
+}
+
+#presets {
+  float:left;
 }

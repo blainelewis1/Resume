@@ -12,7 +12,36 @@ var resume = angular.module('Resume', [])
     };
 }])
 .filter('preset', [function(){
-    return function(item, $scope, dimmed) {
-        return dimmed || !$scope.presetValue || !($scope.presetValue.trim()) || (item.presets && item.presets.indexOf($scope.presetValue) !== -1);
+    return function(item, $scope) {
+        /*
+        Case 1: No presets, nothing clicked     = not dimmed
+        Case 2: No preset, clicked              = dimmed
+        Case 3: Preset, not clicked             = not dimmed
+        Case 4: Preset, clicked                 = dimmed
+        Case 5: Preset (unallowed), not clicked = dimmed
+        Case 6: Preset (unallowed), clicked     = not dimmed
+        */
+
+        var presetUnset = !$scope.presetValue || !$scope.presetValue.trim();
+        var clicked = $scope.clicked;
+
+        if($scope.presetValue !== $scope.prevValue) {
+            clicked = false;
+            $scope.clicked = false;
+        }
+
+        $scope.prevValue = $scope.presetValue;
+
+        if(presetUnset) {
+            return !clicked;
+        } else {
+            var allowed = (item.presets && item.presets.indexOf($scope.presetValue) !== -1);
+
+            if(allowed) {
+                return !clicked;
+            } else {
+                return clicked;
+            }
+        }
     };
 }]);

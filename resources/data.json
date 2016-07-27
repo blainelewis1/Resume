@@ -119,12 +119,12 @@ var experiences = [
 
 var educations =
 [
-  {
+  /*{
    "presets" : ["Developer", "Program Manager"],
    "school" : "University of Waterloo",
    "date" : "January 2017 - December 2018",
    "degree" : "Thesis based MMath focusing on either bioinformatics or human computer interaction."
-  },
+  },*/
   {
    "presets" : ["Developer", "Program Manager"],
    "school" : "University of Alberta",
