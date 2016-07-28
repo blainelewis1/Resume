@@ -3,7 +3,8 @@ var contact =
 [
   {"url" : "mailto:blaine.lewis.1@outlook.com", "text" : "blaine.lewis.1@outlook.com"},
   {"url" : "http://github.com/blainelewis1", "text" : "github.com/blainelewis1"},
-  {"url" : "https://ca.linkedin.com/in/blainelewis1", "text" : "https://ca.linkedin.com/in/blainelewis1"}
+  {"url" : "http://blainelewis1.github.io", "text" : "blainelewis1.github.io"},
+  /*{"url" : "https://ca.linkedin.com/in/blainelewis1", "text" : "https://ca.linkedin.com/in/blainelewis1"}*/
 ];
 
 var skills =

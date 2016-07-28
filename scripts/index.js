@@ -1,3 +1,5 @@
+//TODO: add links using the # url that hard link and disable dimming etc. They'll also hide any customisation stuff. 
+
 var resume = angular.module('Resume', [])
 .controller('Controller', function ($scope) {
   $scope.contact = contact;
