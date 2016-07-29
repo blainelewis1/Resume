@@ -27,14 +27,14 @@ h2 {
     margin:0;
     padding:0;
     font-weight:normal;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-size: 32px;
 }
 
 h3 {
     display:inline-block;
 
-    font-size: 23px;
+    font-size: 20px;
     font-weight:normal;
 
     margin:0;
@@ -45,17 +45,18 @@ h3 {
 
 h4, #education p {
   clear:both;
-  font-size: 15px;
+  font-size: 14px;
   font-weight:normal;
 
   padding:0;
-  padding-bottom:10px;
+
 
   margin:0;
 }
 
 h4 {
   color: #888888;
+  padding-bottom:10px;
 }
 
 a {
@@ -73,11 +74,19 @@ header {
   clear:both;
 }
 
-article {
-  padding-bottom:19px;
+section {
+    margin-bottom: 15px;
 }
 
-article .date, article .location {
+article {
+  padding-bottom:15px;
+}
+
+article:last-of-type {
+  padding-bottom:0;
+}
+
+article .date {
   vertical-align: middle;
 
   color: #888888;
@@ -87,11 +96,6 @@ article .date, article .location {
   margin-left:5px;
 }
 
-article .location {
-  margin-left:20px;
-
-}
-
 article li .date {
   margin-bottom:2px;
   font-size:12px;
@@ -99,10 +103,6 @@ article li .date {
 
 article:hover {
     background-color: #DDDDEE;
-}
-
-article #education {
-  padding-bottom:10px;
 }
 
 article ul {
@@ -145,10 +145,6 @@ article ul li:last-child {
 
 .dim span, .dim h4, .dim ul, .dim .date, .dim p {
     display : none;
-}
-
-#skills {
-  margin-bottom:15px;
 }
 
 #skills ul {
