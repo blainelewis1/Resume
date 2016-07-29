@@ -152,6 +152,7 @@ article ul li:last-child {
   list-style: none;
   padding:0;
   margin:0;
+  clear:both;
 }
 
 #skills ul li {
@@ -171,23 +172,23 @@ article ul li:last-child {
   font-weight: bold;
 }
 
-#frameworks {
+.frameworks {
   display: inline-block;
 }
 
-#frameworks::before {
+.frameworks::before {
   content: '(';
 }
 
-#frameworks::after {
+.frameworks::after {
   content: ')';
 }
 
-#frameworks li::after {
+.frameworks li::after {
   content : ',';
 }
 
-#frameworks li:last-of-type::after {
+.frameworks li:last-of-type::after {
   content : '';
 }
 

@@ -36,7 +36,7 @@
 		</header>
 		<section id="skills">
 			<ul>
-				<li ng-repeat="skill in skills" class="{{skill.experience}}">{{skill.name}} <ul ng-show="skill.frameworks.length" id="frameworks"><li ng-repeat="framework in skill.frameworks" class="{{framework.experience}}">{{framework.name}}</li></ul></li>
+				<li ng-repeat="skill in skills" class="{{skill.experience}}">{{skill.name}} <ul ng-show="skill.frameworks.length" class="frameworks"><li ng-repeat="framework in skill.frameworks" class="{{framework.experience}}">{{framework.name}}</li></ul></li>
 			</ul>
 		</section>
 		<section id="experience">
