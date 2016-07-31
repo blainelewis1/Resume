@@ -20,13 +20,14 @@
 		<title>Resume - Blaine Lewis</title>
 
 		<!-- TODO: make it mobile friendly even if it isn't responsive. -->
+		<!-- TODO: SEO. -->
 	</head>
 	<body ng-controller="Controller">
-		<nav class="no-print">
-			I am a:
+		<nav class="no-print" ng-show="!preloaded">
 			<select ng-model="presetValue" ng-options="preset for preset in presets">
 				<option selected></option>
 			</select>
+			<input type="text" value="{{link(this)}}" disabled="true" />
 		</nav>
 		<header>
 			<h1>Blaine Lewis</h1>
@@ -41,7 +42,7 @@
 		</section>
 		<section id="experience">
 			<h2>Experience</h2>
-			<article ng-click="clicked = !clicked" ng-class="{'dim' : !(experience | preset : this)}" ng-repeat="experience in experiences">
+			<article ng-click="clicked = !clicked" ng-class="{'dim' : !(experience | preset : this) && !preloaded, 'dimming' : !preloaded}" ng-repeat="experience in experiences">
 				<h3 ng-bind-html="experience.title | trustAsHtml"></h3>
 				<span class="date">{{experience.date}}</span>
 				<h4 ng-bind-html="experience.company | trustAsHtml"></h4>
@@ -52,7 +53,7 @@
 		</section>
 		<section id="education">
 			<h2>Education</h2>
-			<article ng-click="clicked = !clicked" ng-class="{'dim' : !(education | preset : this)}" ng-repeat="education in educations">
+			<article ng-repeat="education in educations">
 				<h3>{{education.school}}</h3>
 				<span class="date">{{education.date}}</span>
 				<p ng-bind-html="education.degree | trustAsHtml"></p>

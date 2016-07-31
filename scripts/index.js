@@ -1,7 +1,37 @@
-//TODO: add links using the # url that hard link and disable dimming etc. They'll also hide any customisation stuff. 
-
+//TODO: Maybe add the ability to do skills
 var resume = angular.module('Resume', [])
 .controller('Controller', function ($scope) {
+
+  $scope.preloaded = window.location.hash.substr(1);
+
+  if($scope.preloaded) {
+      $scope.preloaded = parseInt($scope.preloaded);
+      if(!isNaN($scope.preloaded)) {
+          var preloaded_values = [];
+          var i = 0;
+          experiences.reverse();
+          do {
+              if($scope.preloaded & 1) {
+                  preloaded_values.push(experiences[i]);
+              }
+
+              i++;
+          } while((($scope.preloaded = $scope.preloaded >> 1)));
+
+          experiences = preloaded_values;
+          experiences.reverse();
+      } else {
+          //TODO: test if the value is a preset eg. "Program Manager", and just use that
+          if(window.location.hash.substr(1)) {
+
+          }
+      }
+
+      $scope.preloaded = true;
+  }
+
+  $scope.enabled = [];
+  $scope.link = link;
   $scope.contact = contact;
   $scope.skills = skills;
   $scope.experiences = experiences;
@@ -33,17 +63,31 @@ var resume = angular.module('Resume', [])
         }
 
         $scope.prevValue = $scope.presetValue;
+        var val;
 
         if(presetUnset) {
-            return !clicked;
+            val = !clicked;
         } else {
             var allowed = (item.presets && item.presets.indexOf($scope.presetValue) !== -1);
 
             if(allowed) {
-                return !clicked;
+                val = !clicked;
             } else {
-                return clicked;
+                val = clicked;
             }
         }
+
+        $scope.$parent.enabled[$scope.$index] = val;
+
+        return val;
     };
 }]);
+
+function link($scope) {
+    var val = 0;
+    for(var i = 0; i < $scope.enabled.length; i++) {
+        val += $scope.enabled[i] ? Math.pow(2, $scope.enabled.length - i - 1) : 0;
+    }
+
+    return window.location.href.split("#")[0] + "#" + val;
+}

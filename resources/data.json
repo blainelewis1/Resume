@@ -3,7 +3,7 @@ var contact =
 [
   {"url" : "mailto:blaine.lewis.1@outlook.com", "text" : "blaine.lewis.1@outlook.com"},
   {"url" : "http://github.com/blainelewis1", "text" : "github.com/blainelewis1"},
-  {"url" : "http://blainelewis1.github.io", "text" : "blainelewis1.github.io"},
+  {"url" : "http://blainelew.is", "text" : "blainelew.is"},
   /*{"url" : "https://ca.linkedin.com/in/blainelewis1", "text" : "https://ca.linkedin.com/in/blainelewis1"}*/
 ];
 
@@ -26,7 +26,6 @@ var skills =
 
 var experiences = [
   {
-   "id" : "mylyn",
    "presets" : ["Developer"],
    "title" : "Contributor",
    "date" : "September - December 2015",
@@ -35,7 +34,6 @@ var experiences = [
                 "Created a data structure using Java that registers and maintains the relationship between reviews and tasks."]
  },
  {
-  "id" : "ms2",
   "presets" : ["Program Manager", "Developer"],
   "title" : "Program Manager Intern",
   "date" : "May - August 2015",
@@ -45,7 +43,6 @@ var experiences = [
                "Designed an experience enabling more data driven visualizations with capabilities to export to Excel."]
   },
   {
-   "id" : "msambass",
    "presets" : ["Program Manager"],
    "title" : "Intern Ambassador",
    "date" : "September - April 2015",
@@ -54,7 +51,6 @@ var experiences = [
                 "Mentored several students by tutoring computer science and assisting with job applications."]
   },
   {
-   "id" : "multissh",
    "presets" : ["Developer"],
    "title" : "<a href=\"https://github.com/blainelewis1/multissh\">MultiSSH</a>",
    "date" : "January - April 2015",
@@ -64,7 +60,6 @@ var experiences = [
                 "Obtained a 200% increase in throughput over a simulated environment with 95% confidence."]
   },
   {
-   "id" : "ms1",
    "presets" : ["Program Manager", "Developer"],
    "title" : "Program Manager Intern",
    "date" : "May - August 2014",
@@ -75,7 +70,6 @@ var experiences = [
                 "Developed relationships across 6 teams in order to push development of features quickly."]
   },
   {
-   "id" : "kelsey",
    "presets" : ["Developer"],
    "title" : "Web Developer",
    "date" : "February and August 2014",
@@ -84,7 +78,6 @@ var experiences = [
                 "Leveraged PHP's natural templating in an MVC architecture and wrote a basic CMS with jQuery on the front end."]
   },
   {
-   "id" : "stantec",
    "title" : "Student Software Developer",
    "presets" : ["Developer"],
    "date" : "May - August 2013",
@@ -95,7 +88,6 @@ var experiences = [
                 "Improved C#/.NET invoicing software by implementing import and export with Excel saving over an hour per invoice."]
   },
   {
-   "id" : "library",
    "title" : "Youth Technology Intern",
    "date" : "November 2011 - March 2012",
    "company" : "Stony Plain Public Library",
@@ -104,7 +96,6 @@ var experiences = [
                 "Maintained and administered public computers."]
   },
   {
-   "id" : "aicml",
    "presets" : ["Developer"],
    "title" : "Computer Programmer",
    "date" : "July - August 2010 and 2011",
@@ -121,18 +112,16 @@ var experiences = [
 var educations =
 [
   /*{
-   "presets" : ["Developer", "Program Manager"],
    "school" : "University of Waterloo",
    "date" : "January 2017 - December 2018",
    "degree" : "Thesis based MMath focusing on either bioinformatics or human computer interaction."
   },*/
   {
-   "presets" : ["Developer", "Program Manager"],
    "school" : "University of Alberta",
    "date" : "September 2012 - December 2016",
    "degree" : "BSc with specialization in Computer Sciences"
   },
-  {"presets" : ["Developer", "Program Manager"],
+  {
    "school" : "University of Sydney",
    "date" : "February 2016 - July 2016",
    "degree" : "Exchange program. Focus shifted to design and business."

@@ -49,8 +49,6 @@ h4, #education p {
   font-weight:normal;
 
   padding:0;
-
-
   margin:0;
 }
 
@@ -101,8 +99,9 @@ article li .date {
   font-size:12px;
 }
 
-article:hover {
+.dimming:hover {
     background-color: #DDDDEE;
+    cursor: pointer;
 }
 
 article ul {
