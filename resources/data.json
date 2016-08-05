@@ -3,7 +3,7 @@ var contact =
 [
   {"url" : "mailto:blaine.lewis.1@outlook.com", "text" : "blaine.lewis.1@outlook.com"},
   {"url" : "http://github.com/blainelewis1", "text" : "github.com/blainelewis1"},
-  {"url" : "http://blainelew.is", "text" : "blainelew.is"},
+  {"url" : "http://blainelew.is/?utm_source=resume&utm_medium=pdf&utm_campaign=resume", "text" : "blainelew.is"},
   /*{"url" : "https://ca.linkedin.com/in/blainelewis1", "text" : "https://ca.linkedin.com/in/blainelewis1"}*/
 ];
 
@@ -111,11 +111,11 @@ var experiences = [
 
 var educations =
 [
-  /*{
+  {
    "school" : "University of Waterloo",
    "date" : "January 2017 - December 2018",
-   "degree" : "Thesis based MMath focusing on either bioinformatics or human computer interaction."
-  },*/
+   "degree" : "Thesis based MMath studying human computer interaction."
+  },
   {
    "school" : "University of Alberta",
    "date" : "September 2012 - December 2016",
@@ -124,6 +124,6 @@ var educations =
   {
    "school" : "University of Sydney",
    "date" : "February 2016 - July 2016",
-   "degree" : "Exchange program. Focus shifted to design and business."
+   "degree" : "Exchange program. Studied design and business."
   }
 ];
