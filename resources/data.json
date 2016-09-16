@@ -105,8 +105,7 @@ var experiences = [
                 "Implemented advanced graph theory algorithms to identify and visualize shortest paths in a network of people. <div class=\"date\">2010</div>",
                 "Extended existing selection and movement tools using computational geometry and linear algebra. <div class=\"date\">2010</div>"
                 ]
-  },
-
+  }
 ];
 
 var educations =
