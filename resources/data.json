@@ -1,128 +1,208 @@
 var presets = ["Program Manager", "Developer"];
-var contact =
-[
-  {"url" : "mailto:blaine.lewis.1@outlook.com", "text" : "blaine.lewis.1@outlook.com"},
-  {"url" : "http://github.com/blainelewis1", "text" : "github.com/blainelewis1"},
-  {"url" : "http://blainelew.is/?utm_source=resume&utm_medium=pdf&utm_campaign=resume", "text" : "blainelew.is"},
+var contact = [{
+    "url": "mailto:blaine.lewis.1@outlook.com",
+    "text": "blaine.lewis.1@outlook.com"
+  },
+  {
+    "url": "http://github.com/blainelewis1",
+    "text": "github.com/blainelewis1"
+  },
+  {
+    "url": "http://blainelew.is/?utm_source=resume&utm_medium=pdf&utm_campaign=resume",
+    "text": "blainelew.is"
+  },
   /*{"url" : "https://ca.linkedin.com/in/blainelewis1", "text" : "https://ca.linkedin.com/in/blainelewis1"}*/
 ];
 
-var skills =
-[
-  {"level" : "experienced", "name" : "Java"},
-  {"level" : "intermediate", "name" : "C#"},
-  {"level" : "experienced", "name" : "Python"},
-  {"level" : "experienced", "name" : "PHP"},
-  {"level" : "intermediate", "name" : "C/C++"},
-  {"level" : "intermediate", "name" : "Matlab"},
-  {"level" : "experienced", "name" : "Javascript", "frameworks" : [{"level" : "intermediate", "name" : "Node"}, {"level" : "intermediate", "name" : "jQuery"}, {"level" : "intermediate", "name" : "Angular"}]},
-  {"level" : "experienced", "name" : "CSS"},
-  {"level" : "experienced", "name" : "HTML"},
-  {"level" : "experienced", "name" : "SQL", "frameworks" : [{"level" : "experienced", "name" : "Oracle"}, {"level" : "intermediate", "name" : "MySQL"}]},
-  {"level" : "intermediate", "name" : "SVN"},
-  {"level" : "experienced", "name" : "Eclipse"},
-  {"level" : "experienced", "name" : "Visual Studio"}
+var skills = [,
+  {
+    "level": "experienced",
+    "name": "Javascript/ES6",
+    "frameworks": [{
+      "level": "intermediate",
+      "name": "Node"
+    }, {
+      "level": "intermediate",
+      "name": "jQuery"
+    }, {
+      "level": "intermediate",
+      "name": "Angular"
+    }]
+  },
+  {
+    "level": "experienced",
+    "name": "Typescript"
+  },
+  {
+    "level": "experienced",
+    "name": "CSS"
+  },
+  {
+    "level": "experienced",
+    "name": "HTML"
+  }, {
+    "level": "experienced",
+    "name": "Java"
+  },
+  {
+    "level": "intermediate",
+    "name": "C#"
+  },
+  {
+    "level": "experienced",
+    "name": "Python"
+  },
+  {
+    "level": "experienced",
+    "name": "PHP"
+  },
+  {
+    "level": "intermediate",
+    "name": "C/C++"
+  },
+  {
+    "level": "intermediate",
+    "name": "Matlab"
+  },
+  {
+    "level": "experienced",
+    "name": "SQL",
+    "frameworks": [{
+      "level": "experienced",
+      "name": "Oracle"
+    }, {
+      "level": "intermediate",
+      "name": "MySQL"
+    }]
+  },
+  {
+    "level": "intermediate",
+    "name": "Git"
+  },
 ];
 
-var experiences = [
-  {
-   "presets" : ["Developer"],
-   "title" : "Contributor",
-   "date" : "September - December 2015",
-   "company" : "Eclipse/Mylyn - <a href=\"http://ucosp.ca/\">Undergraduate Capstone Open Source Project</a>",
-   "bullets" : ["Worked with a team of students across Canada to further integration of code reviews in Mylyn.",
-                "Created a data structure using Java that registers and maintains the relationship between reviews and tasks."]
- },
- {
-  "presets" : ["Program Manager", "Developer"],
-  "title" : "Program Manager Intern",
-  "date" : "May - August 2015",
-  "company" : "Bing Ads - Microsoft",
-  "bullets" : ["Reimagined piloting Bing Ads features across an entire engineering partner group and operations enabling more pilots run at scale with increased user engagement.",
-               "Discovered dependencies across Bing Ads teams to switch from an in-house version control system to Git.",
-               "Designed an experience enabling more data driven visualizations with capabilities to export to Excel."]
+var experiences = [{
+    "presets": ["Developer"],
+    "title": "Back-End Developer",
+    "date": "September 2016 - Current",
+    "company": "<a href=\"https://www.madhattertech.ca\">Mad Hatter Technology</a>",
+    "bullets": ["Migrated over 50 web sites and applications from CentOS 4 to CentOS 7 while upgrading from PHP 5.2 to 5.6 with less than ten minutes of downtime.",
+      "Created custom payment module integrated with Beanstream built on Drupal 8 using PHP 7.",
+      "Lead organisational change towards industry best practices such as using a bug tracker, server monitoring, improved backup process and significantly improved documentation of server resources.",
+      "Maintained, built and administered several customnNode.JS applications on a MEAN stack."
+    ]
+  }, {
+    "presets": ["Developer"],
+    "title": "Teaching Assistant",
+    "date": "January 2017 - Current",
+    "company": "University of Waterloo",
+    "bullets": ["Assisted in classroom activities for CS 449: Human Computer Interaction. Marked while providing detailed and actionable feedback.",
+      "Marked for an introductory computer science course CS116."
+    ]
+  }, {
+    "presets": ["Developer"],
+    "title": "Contributor",
+    "date": "September - December 2015",
+    "company": "Eclipse/Mylyn - <a href=\"http://ucosp.ca/\">Undergraduate Capstone Open Source Project</a>",
+    "bullets": ["Worked with a team of students across Canada to further integration of code reviews in Mylyn.",
+      "Created a data structure using Java that registers and maintains the relationship between reviews and tasks."
+    ]
   },
   {
-   "presets" : ["Program Manager"],
-   "title" : "Intern Ambassador",
-   "date" : "September - April 2015",
-   "company" : "Microsoft",
-   "bullets" : ["As a volunteer, hosted networking events for over 50 students at the University of Alberta.",
-                "Mentored several students by tutoring computer science and assisting with job applications."]
+    "presets": ["Program Manager", "Developer"],
+    "title": "Program Manager Intern",
+    "date": "May - August 2015",
+    "company": "Bing Ads - Microsoft",
+    "bullets": ["Reimagined the piloting process across three large business units enabling more pilots run at scale with increased user engagement.",
+      "Discovered dependencies across Bing Ads teams to switch from an in-house version control system to Git.",
+      "Designed an experience enabling more data driven visualizations with capabilities to export to Excel."
+    ]
   },
   {
-   "presets" : ["Developer"],
-   "title" : "<a href=\"https://github.com/blainelewis1/multissh\">MultiSSH</a>",
-   "date" : "January - April 2015",
-   "company" : "Research - University of Alberta",
-   "bullets" : ["Researched several techniques for increasing throughput across a WAN over TCP in the presence of packet loss.",
-                "Used Python and the UNIX file system to coordinate any number of SSH streams over a network.",
-                "Obtained a 200% increase in throughput over a simulated environment with 95% confidence."]
+    "presets": ["Program Manager"],
+    "title": "Intern Ambassador",
+    "date": "September - April 2015",
+    "company": "Microsoft",
+    "bullets": ["As a volunteer, hosted networking events for over 50 students at the University of Alberta.",
+      "Mentored several students by tutoring computer science and assisting with job applications."
+    ]
   },
   {
-   "presets" : ["Program Manager", "Developer"],
-   "title" : "Program Manager Intern",
-   "date" : "May - August 2014",
-   "company" : "Bing Ads - Microsoft",
-   "bullets" : ["Delivered a feedback mechanism enabling efficient collection and triage for thousands of user feedback items.",
-                "Designed a new experience for the product's grid controls significantly increasing over 400 users' productivity.",
-                /*"Gathered feedback from the product team to create a product monitoring dashboard.",*/
-                "Developed relationships across 6 teams in order to push development of features quickly."]
+    "presets": ["Developer"],
+    "title": "<a href=\"https://github.com/blainelewis1/multissh\">MultiSSH</a>",
+    "date": "January - April 2015",
+    "company": "Research - University of Alberta",
+    "bullets": ["Researched several techniques for increasing throughput across a WAN over TCP in the presence of packet loss.",
+      "Used Python and the UNIX file system to coordinate any number of SSH streams over a network.",
+      "Obtained a 200% increase in throughput over a simulated environment with 95% confidence."
+    ]
   },
   {
-   "presets" : ["Developer"],
-   "title" : "Web Developer",
-   "date" : "February and August 2014",
-   "company" : "<a href=\"http://kelseyprudhomme.com\">kelseyprudhomme.com</a>",
-   "bullets" : ["Developed and deployed kelseyprudhomme.com from specification.",
-                "Leveraged PHP's natural templating in an MVC architecture and wrote a basic CMS with jQuery on the front end."]
+    "presets": ["Program Manager", "Developer"],
+    "title": "Program Manager Intern",
+    "date": "May - August 2014",
+    "company": "Bing Ads - Microsoft",
+    "bullets": ["Delivered a feedback mechanism enabling efficient collection and triage for thousands of user feedback items.",
+      "Designed a new experience for the product's grid controls significantly increasing over 400 users' productivity.",
+      /*"Gathered feedback from the product team to create a product monitoring dashboard.",*/
+      "Developed relationships across 6 teams in order to push development of features quickly."
+    ]
   },
   {
-   "title" : "Student Software Developer",
-   "presets" : ["Developer"],
-   "date" : "May - August 2013",
-   "company" : "Stantec",
-   "bullets" : ["Constructed a SharePoint media hub to store and serve video to any device for over 10,000 employees.",
-                "Developed an IT site to route vacation requests, organize meeting workspaces and centralize document control.",
-                "Redesigned the extranet and improved its controls increasing the impact of client interaction.",
-                "Improved C#/.NET invoicing software by implementing import and export with Excel saving over an hour per invoice."]
+    "presets": ["Developer"],
+    "title": "Web Developer",
+    "date": "February and August 2014",
+    "company": "<a href=\"http://kelseyprudhomme.com\">kelseyprudhomme.com</a>",
+    "bullets": ["Developed and deployed kelseyprudhomme.com from specification.",
+      "Leveraged PHP's natural templating in an MVC architecture and wrote a basic CMS with jQuery on the front end."
+    ]
   },
   {
-   "title" : "Youth Technology Intern",
-   "date" : "November 2011 - March 2012",
-   "company" : "Stony Plain Public Library",
-   "bullets" : ["Planned and taught courses about using the library's technical resources and related technology.",
-                "Tutored basic computer skills including \"How to use a mouse\" during one on one sessions.",
-                "Maintained and administered public computers."]
+    "title": "Student Software Developer",
+    "presets": ["Developer"],
+    "date": "May - August 2013",
+    "company": "Stantec",
+    "bullets": ["Constructed a SharePoint media hub to store and serve video to any device for over 10,000 employees.",
+      "Developed an IT site to route vacation requests, organize meeting workspaces and centralize document control.",
+      "Redesigned the extranet and improved its controls increasing the impact of client interaction.",
+      "Improved C#/.NET invoicing software by implementing import and export with Excel saving over an hour per invoice."
+    ]
   },
   {
-   "presets" : ["Developer"],
-   "title" : "Computer Programmer",
-   "date" : "July - August 2010 and 2011",
-   "company" : "Alberta Ingenuity Centre for Machine Learning",
-   "bullets" : ["Wrote an OpenStreetMaps implementation in Java for visualization of geographically tagged data.<div class=\"date\">2011</div>",
-                "Extended OpenStreetMaps by developing prefetching and caching algorithms for an excellent viewing experience.<div class=\"date\">2011</div>",
-                "Implemented advanced graph theory algorithms to identify and visualize shortest paths in a network of people. <div class=\"date\">2010</div>",
-                "Extended existing selection and movement tools using computational geometry and linear algebra. <div class=\"date\">2010</div>"
-                ]
+    "title": "Youth Technology Intern",
+    "date": "November 2011 - March 2012",
+    "company": "Stony Plain Public Library",
+    "bullets": ["Planned and taught courses about using the library's technical resources and related technology.",
+      "Tutored basic computer skills including \"How to use a mouse\" during one on one sessions.",
+      "Maintained and administered public computers."
+    ]
+  },
+  {
+    "presets": ["Developer"],
+    "title": "Computer Programmer",
+    "date": "July - August 2010 and 2011",
+    "company": "Alberta Ingenuity Centre for Machine Learning",
+    "bullets": ["Wrote an OpenStreetMaps implementation in Java for visualization of geographically tagged data.<div class=\"date\">2011</div>",
+      "Extended OpenStreetMaps by developing prefetching and caching algorithms for an excellent viewing experience.<div class=\"date\">2011</div>",
+      "Implemented advanced graph theory algorithms to identify and visualize shortest paths in a network of people. <div class=\"date\">2010</div>",
+      "Extended existing selection and movement tools using computational geometry and linear algebra. <div class=\"date\">2010</div>"
+    ]
   }
 ];
 
-var educations =
-[
-  {
-   "school" : "University of Waterloo",
-   "date" : "January 2017 - December 2018",
-   "degree" : "Thesis based MMath studying human computer interaction."
+var educations = [{
+    "school": "University of Waterloo",
+    "date": "January 2017 - January 2018",
+    "degree": "Thesis based MMath researching human computer interaction."
   },
   {
-   "school" : "University of Alberta",
-   "date" : "September 2012 - December 2016",
-   "degree" : "BSc with specialization in Computer Sciences"
+    "school": "University of Sydney",
+    "date": "February 2016 - July 2016",
+    "degree": "Exchange program. Studied design and business."
   },
   {
-   "school" : "University of Sydney",
-   "date" : "February 2016 - July 2016",
-   "degree" : "Exchange program. Studied design and business."
+    "school": "University of Alberta",
+    "date": "September 2012 - December 2016",
+    "degree": "BSc with specialization in Computer Sciences"
   }
 ];
