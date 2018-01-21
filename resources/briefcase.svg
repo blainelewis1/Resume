@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="
+    fill: none;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-width: 10;
+" width="110" height="90"><rect width="30" height="15" x="40" y="5"></rect><rect width="100" height="60" x="5" y="20"></rect></svg>
