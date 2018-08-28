@@ -134,11 +134,11 @@ const App = ({ skills, contacts, experiences, educations }) => (
     </div>
     <Skills skills={skills} />
     <Educations educations={educations} />
+    <Publications publications={conferencePapers} />
     <Experiences
       ind_experiences={ind_experiences}
       aca_experiences={aca_experiences}
     />
-    <Publications publications={conferencePapers} />
   </div>
 );
 
