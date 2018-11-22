@@ -77,7 +77,7 @@ export var aca_experiences = [
     date: "August 2018 - December 2018",
     company: "University of Canterbury, New Zealand",
     blurb:
-      "Working as a research assistant to Professor Andy Cockburn. Research is focused on designing interfaces that maximise the number of people successfully adopting keyboard shortcuts."
+      "Working as a research assistant to Professor Andy Cockburn. Developed and evaluated a technique for improving keyboard shortcut vocabulary."
   },
   {
     title: "Instructional Apprentice",
@@ -172,11 +172,19 @@ export var ind_experiences = [
 
 export var educations = [
   {
+    degree: "PhD, Computer Science - Human Computer Interaction",
+    school: "Unknown",
+    date: "September 2019",
+    bullets: [
+      "Applying for Human Computer Interaction PhD programs to start in September 2019."
+    ]
+  },
+  {
     degree: "MMath, Computer Science Research Thesis",
     school: "University of Waterloo",
     date: "January 2017 - Current (December 2018 expected)",
     bullets: [
-      "Studying Human Computer Interaction under the supervision of Professor Daniel Vogel.",
+      "Studying Human Computer Interaction under the supervision of Professor Daniel Vogel and a research assistantship with Professor Andy Cockburn.",
       "Developing interaction techniques to improve user efficiency by encouraging a transition from novice to expert techniques.",
       "Course projects: hand pose estimation with OpenCV and commodity cameras, curriculum learning for neural networks in TensorFlow, and a study on trust and emotion in human robot interaction."
     ]
@@ -191,5 +199,8 @@ export var educations = [
 ];
 
 export var conferencePapers = [
+  // "<b>Blaine Lewis</b>, Greg d'Eon, Andy Cockburn, and Daniel Vogel. KeyMap: Improving Keyboard Shortcut Vocabulary Through Display-Input Correspondence. <b>Under Submission to CHI'19</b>",
+  // "Andy Cockburn, <b>Blaine Lewis</b>, Carl Gutwin. Decisions on Interface Features: The Influence of Attribute Framing and Risky Choice Framing  <b>Under Submission to CHI'19</b>",
+  // "Wenzhe Cui, Jingjie Zheng, <b>Blaine Lewis</b>, Daniel Vogel, Xiaojun Bi. HotStrokes: Word-Gesture Shortcuts on a Trackpad. <b>Under Submission to CHI'19</b>",
   "Jingjie Zheng, <b>Blaine Lewis</b>, Jeff Avery, and Daniel Vogel. 2018. FingerArc and FingerChord: Supporting Novice to Expert Transitions with Guided Finger-Aware Shortcuts. <i>In Proceedings of the 31th Annual Symposium on User Interface Software and Technology <b>(UIST '18)</b>.</i> ACM, New York, NY, USA, 17p."
 ];
