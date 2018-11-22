@@ -173,7 +173,7 @@ export var ind_experiences = [
 export var educations = [
   {
     degree: "PhD, Computer Science - Human Computer Interaction",
-    school: "Unknown",
+    school: "TBD",
     date: "September 2019",
     bullets: [
       "Applying for Human Computer Interaction PhD programs to start in September 2019."
@@ -182,7 +182,7 @@ export var educations = [
   {
     degree: "MMath, Computer Science Research Thesis",
     school: "University of Waterloo",
-    date: "January 2017 - Current (December 2018 expected)",
+    date: "January 2017 - Current (January 2019 expected)",
     bullets: [
       "Studying Human Computer Interaction under the supervision of Professor Daniel Vogel and a research assistantship with Professor Andy Cockburn.",
       "Developing interaction techniques to improve user efficiency by encouraging a transition from novice to expert techniques.",
