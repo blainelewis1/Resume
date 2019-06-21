@@ -77,14 +77,14 @@ const Experiences = ({ ind_experiences, aca_experiences }) => (
       <h2>Experience</h2>
       <br />
 
-      <h3>Industry</h3>
+      {/* <h3>Industry</h3> */}
       {ind_experiences.map(experience => (
         <Experience {...experience} />
       ))}
-      <h3>Academic</h3>
+      {/* <h3>Academic</h3>
       {aca_experiences.map(experience => (
         <Experience {...experience} />
-      ))}
+      ))} */}
     </div>
   </div>
 );
