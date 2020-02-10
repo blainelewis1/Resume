@@ -1,15 +1,14 @@
 export var presets = ["Program Manager", "Developer"];
 export var contacts = [
   {
-    text: "Waterloo, Canada"
+    text: "Toronto, Canada"
   },
   // {
   //   "text" : "+1 (780) 499 - 2513"
   // },
   {
-    url:
-      "https://blainelewis1.github.io/?utm_source=resume&utm_medium=pdf&utm_campaign=resume",
-    text: "http://blainelewis1.github.io"
+    url: "http://blainelewis.ca",
+    text: "http://blainelewis.ca"
   },
   {
     url: "mailto:blaine.lewis.1@gmail.com",
@@ -61,9 +60,6 @@ export var skills = [
   //   name: "C++"
   // },
   {
-    name: "Docker"
-  },
-  {
     name: "SQL"
   },
   {
@@ -73,6 +69,13 @@ export var skills = [
 
 export var aca_experiences = [
   {
+    title: "Teaching Assistant",
+    date: "September 2019 - Current",
+    company: "University of Toronto",
+    blurb:
+      "Teach weekly upper year (300-400) tutorials on topics related to Human Computer Interaction."
+  },
+  {
     title: "Research Assistant",
     date: "August 2018 - December 2018",
     company: "University of Canterbury",
@@ -81,7 +84,7 @@ export var aca_experiences = [
   },
   {
     title: "Instructional Apprentice",
-    date: "August 2017 - August 2018",
+    date: "August 2017 - August 2019",
     company: "University of Waterloo",
     blurb:
       "Responsible for managing a team of 5 teaching assistants, preparing and teaching tutorials, and designing course materials for CS 349 User Interfaces."
@@ -97,17 +100,31 @@ export var aca_experiences = [
 
 export var ind_experiences = [
   {
+    title: "Teaching Assistant",
+    date: "September 2019 - Current",
+    company: "University of Toronto",
+    blurb:
+      "Teach weekly upper year (300-400) tutorials on topics related to Human Computer Interaction."
+  },
+  {
     presets: ["Developer"],
     title: "User Interfaces Research Intern",
     date: "January - April 2019",
     company: "Autodesk Research",
     blurb:
-      "Performed user studies investigating group chat, and developed a new visualisation system."
+      "Performed user studies investigating group chat, and developed a new visualisation system working primarily with Justin Matejka."
+  },
+  {
+    title: "Research Assistant",
+    date: "August 2018 - December 2018",
+    company: "University of Canterbury",
+    blurb:
+      "Working as a research assistant to Professor Andy Cockburn. Developed and evaluated a technique for improving keyboard shortcut vocabulary."
   },
   {
     presets: ["Developer"],
     title: "Full Stack Developer",
-    date: "September 2016 - Current",
+    date: "September 2016 - April 2019",
     company: "Mad Hatter Technology",
     blurb:
       "Responsible for developing, maintaining, and administering over 50 websites.",
@@ -117,13 +134,7 @@ export var ind_experiences = [
       "Championed company-wide adoption of best practices such as bug tracking and server monitoring."
     ]
   },
-  {
-    title: "Research Assistant",
-    date: "August 2018 - December 2018",
-    company: "University of Canterbury",
-    blurb:
-      "Working as a research assistant to Professor Andy Cockburn. Developed and evaluated a technique for improving keyboard shortcut vocabulary."
-  },
+
   {
     title: "Instructional Apprentice",
     date: "August 2017 - August 2018",
@@ -200,13 +211,21 @@ export var ind_experiences = [
 
 export var educations = [
   {
+    degree: "PhD, Computer Science",
+    school: "University of Toronto",
+    date: "September 2019 - September 2023",
+    bullets: [
+      "I research the design of subtle interface changes and their impact on well-being. My research is supervised by Professor Tovi Grossman.",
+      "My interests have also expanded to creating new methodologies that drive open science and more rigour in our work as a community."
+    ]
+  },
+  {
     degree: "MMath, Computer Science Research Thesis",
     school: "University of Waterloo",
-    date: "January 2017 - Current (August 2019 expected)",
+    date: "January 2017 - August 2019",
     bullets: [
       "Studying Human Computer Interaction under the supervision of Professor Daniel Vogel and a research assistantship with Professor Andy Cockburn.",
-      "Developing interaction techniques to improve user efficiency by encouraging a transition from novice to expert techniques.",
-      "Course projects: hand pose estimation with OpenCV and commodity cameras, curriculum learning for neural networks in TensorFlow, and a study on trust and emotion in human robot interaction."
+      "Thesis: Longer Delays in Rehearsal-based Interfaces Increase Expert Use."
     ]
   },
   {
@@ -219,8 +238,8 @@ export var educations = [
 ];
 
 export var conferencePapers = [
-  // "<b>Blaine Lewis</b>, Greg d'Eon, Andy Cockburn, and Daniel Vogel. KeyMap: Improving Keyboard Shortcut Vocabulary Through Display-Input Correspondence. <b>Under Submission to CHI'19</b>",
-  // "Andy Cockburn, <b>Blaine Lewis</b>, Carl Gutwin. Decisions on Interface Features: The Influence of Attribute Framing and Risky Choice Framing  <b>Under Submission to CHI'19</b>",
+  "<b>Blaine Lewis*</b>, Greg d'Eon*, Andy Cockburn, and Daniel Vogel. KeyMap: KeyMap: Improving Keyboard Shortcut Vocabulary Using Norman's Mapping. <i>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems <b>(CHI '20)</b>.</i> (<b>To Appear</b>)",
+  "Andy Cockburn, <b>Blaine Lewis</b>, Phillip Quinn, Carl Gutwin. Framing Effects Influence Interface Feature Decisions <i>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems <b>(CHI '20)</b>.</i> (<b>To Appear</b>)",
   "Wenzhe Cui, Jingjie Zheng, <b>Blaine Lewis</b>, Daniel Vogel, Xiaojun Bi. HotStrokes: Word-Gesture Shortcuts on a Trackpad. 2019. <i>Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems <b>(CHI '19)</b>.</i> ACM, New York, NY, USA, 10p.",
   "Jingjie Zheng, <b>Blaine Lewis</b>, Jeff Avery, and Daniel Vogel. 2018. FingerArc and FingerChord: Supporting Novice to Expert Transitions with Guided Finger-Aware Shortcuts. <i>In Proceedings of the 31th Annual Symposium on User Interface Software and Technology <b>(UIST '18)</b>.</i> ACM, New York, NY, USA, 17p."
 ];
