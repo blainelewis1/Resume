@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
-import { conferencePapers, aca_experiences, ind_experiences } from "./data";
+import {
+  conferencePapers,
+  scholarships,
+  aca_experiences,
+  ind_experiences,
+} from "./data";
 
 const Skills = ({ skills }) => {
   return (
@@ -8,7 +13,7 @@ const Skills = ({ skills }) => {
       <div className="col s12">
         <h2>Skills</h2>
         <ul>
-          {skills.map(skill => (
+          {skills.map((skill) => (
             <li>{skill.name}</li>
           ))}
         </ul>
@@ -19,7 +24,7 @@ const Skills = ({ skills }) => {
 
 const Contacts = ({ contacts }) => (
   <ul id="contact">
-    {contacts.map(contact => (
+    {contacts.map((contact) => (
       <Contact {...contact} />
     ))}
   </ul>
@@ -45,7 +50,7 @@ const Educations = ({ educations }) => (
   <div className="row" id="education">
     <div className="col s12">
       <h2>Education</h2>
-      {educations.map(education => (
+      {educations.map((education) => (
         <Education {...education} />
       ))}
     </div>
@@ -63,7 +68,7 @@ const Education = ({ degree, school, blurb, date, bullets }) => (
 
     {bullets && (
       <ul className="browser-default">
-        {bullets.map(bullet => (
+        {bullets.map((bullet) => (
           <li>{bullet}</li>
         ))}
       </ul>
@@ -78,7 +83,7 @@ const Experiences = ({ ind_experiences, aca_experiences }) => (
       <br />
 
       {/* <h3>Industry</h3> */}
-      {ind_experiences.map(experience => (
+      {ind_experiences.map((experience) => (
         <Experience {...experience} />
       ))}
       {/* <h3>Academic</h3>
@@ -100,7 +105,7 @@ const Experience = ({ title, company, date, blurb, bullets }) => {
       {blurb && <p>{blurb}</p>}
       {bullets && (
         <ul className="browser-default">
-          {bullets.map(bullet => (
+          {bullets.map((bullet) => (
             <li>{bullet}</li>
           ))}
         </ul>
@@ -109,12 +114,29 @@ const Experience = ({ title, company, date, blurb, bullets }) => {
   );
 };
 
+const Scholarships = ({ scholarships }) => (
+  <div className="row" id="scholarships" styled={{ marginTop: "0.5rem" }}>
+    <h3 style={{ paddingLeft: "0.75rem" }}>Scholarships</h3>
+    <div className="col s12">
+      {/* <h3>Conference Papers</h3> */}
+      {scholarships.map(({ title, blurb, date }) => (
+        <div className="item">
+          <h3>{title}</h3>
+          <br />
+          <span className="date"> {date}</span>
+          {blurb && <p>{blurb}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const Publications = ({ publications }) => (
   <div className="row" id="publications">
     <h2 style={{ paddingLeft: "0.75rem" }}>Publications</h2>
     <div className="col s12">
-      <h3>Conference Papers</h3>
-      {publications.map(publication => (
+      {/* <h3>Conference Papers</h3> */}
+      {publications.map((publication) => (
         <div
           className="item"
           dangerouslySetInnerHTML={{ __html: publication }}
@@ -134,6 +156,7 @@ const App = ({ skills, contacts, experiences, educations }) => (
     </div>
     <Skills skills={skills} />
     <Educations educations={educations} />
+    <Scholarships scholarships={scholarships} />
     <Publications publications={conferencePapers} />
     <Experiences
       ind_experiences={ind_experiences}
