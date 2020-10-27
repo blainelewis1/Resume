@@ -2,7 +2,7 @@ export var presets = ["Program Manager", "Developer"];
 
 export let scholarships = [
   {
-    blurb: "$63,000 over 3 years.",
+    blurb: "$63,000 over 3 years based on research potential.",
     title: "NSERC Postgraduate Scholarship (PGS D)",
     date: "September 2019 - September 2022",
   },
@@ -16,7 +16,7 @@ export var contacts = [
   // },
   {
     url: "https://blainelewis.ca",
-    text: "http://blainelewis.ca",
+    text: "https://blainelewis.ca",
   },
   {
     url: "mailto:blaine@dgp.toronto.edu",

@@ -115,7 +115,7 @@ const Experience = ({ title, company, date, blurb, bullets }) => {
 };
 
 const Scholarships = ({ scholarships }) => (
-  <div className="row" id="scholarships" styled={{ marginTop: "0.5rem" }}>
+  <div className="row" id="scholarships" style={{ marginTop: "0.5rem" }}>
     <h3 style={{ paddingLeft: "0.75rem" }}>Scholarships</h3>
     <div className="col s12">
       {/* <h3>Conference Papers</h3> */}
@@ -162,6 +162,19 @@ const App = ({ skills, contacts, experiences, educations }) => (
       ind_experiences={ind_experiences}
       aca_experiences={aca_experiences}
     />
+    <div className="row">
+      <h2>Reviewing</h2>
+      <div className="item">
+        <p>
+          <ul>
+            <li>CHI2021</li>
+            <li>MobileHCI2020</li>
+            <li>UIST2020 (Special Recognition for Outstanding Review)</li>
+            <li>CHI2019</li>
+          </ul>
+        </p>
+      </div>
+    </div>
   </div>
 );
 
