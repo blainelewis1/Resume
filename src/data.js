@@ -249,7 +249,7 @@ export var educations = [
 ];
 
 export var conferencePapers = [
-  "<b>Blaine Lewis</b>, and Daniel Vogel. Longer Delays in Rehearsal-based Interfaces Increase Expert Use. <i>ACM Trans. Comput.-Hum. Interact <b>(TOCHI)</b>. (To Appear)</i>",
+  "<b>Blaine Lewis</b>, and Daniel Vogel. Longer Delays in Rehearsal-based Interfaces Increase Expert Use. <i>ACM Trans. Comput.-Hum. Interact <b>(TOCHI)</b>. 27, 6, Article 45 (November 2020), 41 pages.</i>",
   "<b>Blaine Lewis*</b>, Greg d'Eon*, Andy Cockburn, and Daniel Vogel. KeyMap: KeyMap: Improving Keyboard Shortcut Vocabulary Using Norman's Mapping. <i>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems <b>(CHI '20)</b>. ACM, New York, NY, USA.",
   "Andy Cockburn, <b>Blaine Lewis</b>, Phillip Quinn, Carl Gutwin. Framing Effects Influence Interface Feature Decisions <i>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems <b>(CHI '20)</b>.</i> ACM, New York, NY, USA.",
   "Wenzhe Cui, Jingjie Zheng, <b>Blaine Lewis</b>, Daniel Vogel, Xiaojun Bi. HotStrokes: Word-Gesture Shortcuts on a Trackpad. 2019. <i>Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems <b>(CHI '19)</b>.</i> ACM, New York, NY, USA.",
