@@ -47,6 +47,7 @@ export var skills = [
   {
     name: "React",
   },
+  { name: "D3" },
   {
     name: "Node",
   },
@@ -117,7 +118,7 @@ export var ind_experiences = [
     date: "January - April 2019",
     company: "Autodesk Research",
     blurb:
-      "Performed interviews and a qualitative analysis to investigate group chat. Used findings to develop a new visualisation system capable of handling millions of messages wile working with Justin Matejka.",
+      "Performed interviews and a qualitative analysis to investigate group chat. Used findings to develop a new visualisation system using React and D3 capable of handling millions of messages wile working with Justin Matejka.",
   },
   {
     title: "Research Assistant",
